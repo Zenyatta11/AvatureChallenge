@@ -1,0 +1,18 @@
+version: "3"
+services:
+  postgres:
+      image: clkao/postgres-plv8
+      container_name: postgres-avature-challenge
+      environment:
+          POSTGRES_PASSWORD: Password12!
+      ports:
+          - "5432:5432"
+      networks:
+          - postgres
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
